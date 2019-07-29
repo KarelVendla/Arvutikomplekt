@@ -181,13 +181,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901221251587_TootaMigration.cs" />
-    <Compile Include="Migrations\201901221251587_TootaMigration.Designer.cs">
-      <DependentUpon>201901221251587_TootaMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901291051032_FinalDb.cs" />
-    <Compile Include="Migrations\201901291051032_FinalDb.Designer.cs">
-      <DependentUpon>201901291051032_FinalDb.cs</DependentUpon>
+    <Compile Include="Migrations\201907291539384_init.cs" />
+    <Compile Include="Migrations\201907291539384_init.Designer.cs">
+      <DependentUpon>201907291539384_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -280,11 +276,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901221251587_TootaMigration.resx">
-      <DependentUpon>201901221251587_TootaMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901291051032_FinalDb.resx">
-      <DependentUpon>201901291051032_FinalDb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907291539384_init.resx">
+      <DependentUpon>201907291539384_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

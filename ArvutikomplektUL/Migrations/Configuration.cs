@@ -10,7 +10,6 @@ namespace ArvutikomplektUL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "ArvutikomplektUL.Models.ApplicationDbContext";
         }
 
         protected override void Seed(ArvutikomplektUL.Models.ApplicationDbContext context)
