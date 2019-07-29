@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ArvutikomplektUL.Models.Arvutikomplekt>
+
+@{
+    ViewBag.Title = "Pakkimine";
+}
+
+<h2>Pakkimine</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kirjeldus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Korpus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kuvar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pakitud)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kirjeldus)
+        </td>
+        <td>
+            @if (item.Korpus == 1)
+            {
+                @:Komplektis
+            }
+            else
+            {
+                @:Komplekteerimata
+            }
+        </td>
+        <td>
+            @if (item.Kuvar == 1)
+            {
+                @:Komplektis
+            }
+            else
+            {
+                @:Komplekteerimata
+            }
+        </td>
+        <td>
+            @if (item.Pakitud == 1)
+            {
+                @:Jah
+            }
+            else
+            {
+                @:Ei
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Pakitud", "Packed", new { id = item.Id, packed = 1 })
+        </td>
+    </tr>
+    }
+
+</table>

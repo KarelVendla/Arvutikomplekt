@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ArvutikomplektUL.Models.Arvutikomplekt>
+
+@{
+    ViewBag.Title = "Komplekteerimiseks";
+}
+
+<h2>Komplekteerimine</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kirjeldus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Korpus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kuvar)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kirjeldus)
+        </td>
+        <td>
+            @if (item.Korpus == 0)
+            {
+                @Html.ActionLink("Komplekti","Assemble", new { id = item.Id, assemble = 1 })
+            } else
+            {
+                @:Komplektis
+            }
+        </td>
+        <td>
+            @if (item.Kuvar == 0)
+            {
+                @Html.ActionLink("Komplekti", "Assemble", new { id = item.Id, assemble = 2 })
+            } else {
+                @:Komplektis
+            }
+        </td>
+    </tr>
+}
+
+</table>
